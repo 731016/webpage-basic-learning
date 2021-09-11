@@ -206,3 +206,49 @@
 ```
 **效果展示**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/112156_d3d6c917_8254421.png "3.png")
+
+# 链接伪类选择器
+```html
+<style>
+    a {
+        display: inline-block;
+        width: 150px;
+        margin: 100px 50%;
+        font-size: 32px;
+        font-weight: 700;
+        color: purple;
+        text-decoration: none;
+    }
+    /* 未访问 */
+    /* a:link {
+        text-decoration: none;
+        color: red;
+    } */
+    /* 已点击过 */
+    /* #aa {
+        color: red;
+    } */
+    
+    a:visited {
+        text-decoration: none;
+        color: red;
+    }
+    /* 鼠标移到连接上 鼠标悬停 */
+    
+    a:hover {
+        text-decoration: underline;
+        color: blue;
+    }
+    /*选定的链接 鼠标点击 */
+    /* a:active {
+        text-decoration: underline;
+        color: blue;
+    } */
+</style>
+
+<body>
+    <a href="#" id="aa">百度一下</a>
+</body>
+```
+**效果展示**  
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/112436_a3047354_8254421.png "hover.png")
