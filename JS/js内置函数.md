@@ -30,3 +30,24 @@
 ```
 **效果展示**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/121447_e62f4454_8254421.png "js.png")
+
+# 函数-累加求和
+```js
+<script>
+        function printSingle() {
+            document.write('△');
+        }
+        // printSingle();
+        function sum(num) {
+            let sum = 0;
+            for (let i = 0; i < num; i++) {
+                sum += i;
+            }
+            document.write('<h2 style="color:#FC011A;">' + sum + '</h2>');
+            // console.log(sum);
+        }
+        sum(prompt('输入要累加的数：'));
+    </script>
+```
+**效果展示**  
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/124820_122e15ba_8254421.png "sum.png")
