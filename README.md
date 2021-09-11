@@ -76,7 +76,7 @@ html,css,javascript的基础学习案例
 **案例效果**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/120928_2fde7d03_8254421.png "pwd.png")
 
-4. [猜大小](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/random.html)  
+4. [猜大小](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/random.html)  
 **案例效果**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/121113_b8618eb7_8254421.png "rand.png")
 
@@ -84,3 +84,15 @@ html,css,javascript的基础学习案例
 **案例效果**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/121256_79b8a1ad_8254421.png "mul.png")
 
+6. [随机选取图片](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/Olympic_rings.html)
+**案例效果**  
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/130937_81ee4c6e_8254421.png "selectimg.png")
+
+7. [QQ注册js自动切换图片效果](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/qq_register.html)
+**案例效果**  
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/131229_cf4c11d1_8254421.png "qq1.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/131238_e5ae5dbf_8254421.png "qq2.png")
+
+8. [注册验证](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/reg.html)
+**案例效果**  
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/131423_9db34cf9_8254421.png "zcyz.png")
