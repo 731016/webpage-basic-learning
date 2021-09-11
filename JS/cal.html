@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算器</title>
+</head>
+<style>
+    table td {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        background-color: #E8EFF6;
+    }
+    
+    table {
+        margin: 100px auto;
+        border: 0;
+        background-color: #D9E4F1;
+        border-radius: 25px;
+    }
+    
+    .one {
+        border: 2px solid #ccc;
+        text-align: right;
+    }
+    
+    td:hover {
+        background-color: pink;
+        cursor: pointer;
+    }
+    
+    #show {
+        background-color: #fff;
+    }
+</style>
+
+<body>
+    <table border="1" cellspacing="10px" cellpadding="0">
+        <tr>
+            <td colspan="4" class="one" id="show">NAN</td>
+        </tr>
+        <tr>
+            <td id="_7" class="btn">7</td>
+            <td id="_8" class="btn">8</td>
+            <td id="_9" class="btn">9</td>
+            <td id="divide" class="btn">/</td>
+        </tr>
+        <tr>
+            <td id="_4" class="btn">4</td>
+            <td id="_5" class="btn">5</td>
+            <td id="_6" class="btn">6</td>
+            <td id="mul" class="btn">*</td>
+        </tr>
+        <tr>
+            <td id="_1" class="btn">1</td>
+            <td id="_2" class="btn">2</td>
+            <td id="_3" class="btn">3</td>
+            <td id="sub" class="btn">-</td>
+        </tr>
+        <tr>
+            <td id="_0" class="btn">0</td>
+            <td id="radixPoint" class="btn">.</td>
+            <td id="add" class="btn">+</td>
+            <td id="cal" class="btn">=</td>
+        </tr>
+    </table>
+    <script>
+        var exp = '';
+        var btn = document.getElementsByClassName('btn');
+        var show = document.getElementById('show');
+        for (let i = 0; i < btn.length; i++) {
+            btn[i].onclick = function() {
+                if (this.innerText != '=') {
+                    if (exp[exp.length - 1] == '.') {
+                        if (btn[i].innerText == '.') {
+                            return;
+                        } else {
+                            exp += this.innerText
+                            show.innerText = exp;
+                        }
+                    } else {
+                        exp += this.innerText
+                        show.innerText = exp;
+                    }
+                    // if (exp == '') {
+                    //     console.log(exp[exp.length - 1]);
+                    //     if (btn[i].innerText == '.' || btn[i].innerText == '*' || btn[i].innerText == '/' || btn[i].innerText == '+') {
+                    //         console.log(btn[i].innerText);
+                    //         return;
+                    //     } else {
+                    //         exp += this.innerText
+                    //         show.innerText = exp;
+                    //     }
+                    // }
+
+                } else if (this.innerText == '=') {
+                    show.innerText = eval(show.innerText);
+                    exp = '';
+                }
+            }
+        }
+        // var show = document.getElementById('show');
+        // var _1 = document.getElementById('_1');
+        // var _2 = document.getElementById('_2');
+        // var _3 = document.getElementById('_3');
+        // var _4 = document.getElementById('_4');
+        // var _5 = document.getElementById('_5');
+        // var _6 = document.getElementById('_6');
+        // var _7 = document.getElementById('_7');
+        // var _8 = document.getElementById('_8');
+        // var _9 = document.getElementById('_9');
+        // var add = document.getElementById('add');
+        // var sub = document.getElementById('sub');
+        // var mul = document.getElementById('mul');
+        // var divide = document.getElementById('divide');
+        // var cal = document.getElementById('cal');
+        // var radixPoint = document.getElementById('radixPoint');
+        // var exp = '';
+        // _1.onclick = function() {
+        //     exp += this.innerText
+        //     show.innerText = exp;
+        // };
+        // _2.onclick = function() {
+        //     exp += this.innerText
+        //     show.innerText = exp;
+        // };
+        // _3.onclick = function() {
+        //     exp += this.innerText
+        //     show.innerText = exp;
+        // };
+        // _4.onclick = function() {
+        //     exp += this.innerText
+        //     show.innerText = exp;
+        // };
+        // _5.onclick = function() {
+        //     exp += this.innerText
+        //     show.innerText = exp;
+        // };
+        // _6.onclick = function() {
+        //     exp += this.innerText
+        //     show.innerText = exp;
+        // };
+        // _7.onclick = function() {
+        //     exp += this.innerText
+        //     show.innerText = exp;
+        // };
+        // _8.onclick = function() {
+        //     exp += this.innerText
+        //     show.innerText = exp;
+        // };
+        // _9.onclick = function() {
+        //     exp += this.innerText
+        //     show.innerText = exp;
+        // };
+        // add.onclick = function() {
+        //     exp += this.innerText
+        //     show.innerText = exp;
+        // };
+        // sub.onclick = function() {
+        //     exp += this.innerText
+        //     show.innerText = exp;
+        // };
+        // mul.onclick = function() {
+        //     exp += this.innerText
+        //     show.innerText = exp;
+        // };
+        // divide.onclick = function() {
+        //     exp += this.innerText
+        //     show.innerText = exp;
+        // };
+        // radixPoint.onclick = function() {
+        // if (exp.lastIndexOf('.') != -1) {
+        //     return;
+        // } else {
+        //     exp += this.innerText
+        //     show.innerText = exp;
+        // }
+        // };
+        // cal.onclick = function() {
+        //     show.innerText = eval(show.innerText);
+        //     exp = '';
+        // };
+        //判断是否是数字
+        var isNum1 = isNaN('345');
+        console.log(isNum1);
+
+        var isNum2 = isNaN('34f');
+        console.log(isNum2);
+
+        //字符串编码
+        var url = "http://www.baidu.com/?name=团队&age=21";
+        var str = encodeURI(url);
+        console.log(str); //http://www.baidu.com/?name=%E5%9B%A2%E9%98%9F&age=21
+        //解码
+        str = decodeURI(str);
+        console.log(str); //http://www.baidu.com/?name=团队&age=21
+
+        var rgx1 = /h{2}/; // 连续出现两次
+        var rgx11 = /(he){2}/; // he连续出现两次以上
+        var rgx2 = /h{1,3}/; // 出现1-3次
+        // + 一次~多次
+        // * 0~多次
+        // ? 0~一次
+        var vvr1 = 'uh';
+        var vvr2 = 'hehec';
+        //正则校验
+        var flag1 = rgx1.test(vvr1);
+        var flag2 = rgx11.test(vvr2);
+        console.log(flag1); //false
+        console.log(flag2); //true
+
+        var str = 'dsfg.fsdgd.sf.gdg';
+        var regEx = /[\.]?/g;
+        var newStr = str.replace(regEx, '');
+        console.log(newStr);
+        // search() // 检索字符串
+    </script>
+</body>
+
+</html>
+
+</html>
