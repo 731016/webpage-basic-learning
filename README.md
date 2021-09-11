@@ -1,11 +1,12 @@
 # 前端基础学习
 
 ## 介绍
-html,css,javascript的基础学习案例
+`html`,`css`,`javascript`的**基础**学习案例
 
 ## 源码
 + [HTML案例源码](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/HTML/html-study.zip)
 + [CSS案例源码](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/CSS/css-study.zip)
++ [javascript案例源码](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/js-study.zip)
 
 ## HTML
 + [HTML模板](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/HTML/HTML%E6%A8%A1%E6%9D%BF.md)
