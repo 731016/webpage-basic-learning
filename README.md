@@ -97,3 +97,6 @@
 8. [注册验证](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/reg.html)
 **案例效果**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/131423_9db34cf9_8254421.png "zcyz.png")
+
+# html+css+js综合案例
+1. 
