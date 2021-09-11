@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        margin: 50px auto;
+        width: 500px;
+        height: 800px;
+    }
+    
+    .choose,
+    .show {
+        width: 80%;
+        height: 50%;
+    }
+    
+    .choose {
+        position: relative;
+    }
+    
+    .show {
+        background-size: contain;
+        border: 1px dashed #18A05E;
+    }
+    
+    .choose input[type="button"] {
+        top: 85%;
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        background-color: #21A4F1;
+        border: 1px solid #21A4F1;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 10px;
+        font-family: Consolas;
+    }
+    
+    #alter {
+        left: 15%;
+        top: 85%;
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        background-color: #88c2e4;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        border-radius: 10px;
+        font-family: Consolas;
+        cursor: no-drop;
+    }
+    
+    .choose .img {
+        width: 100%;
+        height: 63%;
+        border: 2px solid #DD5145;
+        background-position: center center;
+        border-radius: 5px;
+    }
+    
+    .start {
+        left: 15%;
+    }
+    
+    .stop {
+        right: 15%;
+    }
+    
+    .img,
+    .show {
+        background-repeat: no-repeat;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <div class="choose">
+            <div class="img"></div>
+            <input type="button" value="点击开始" class="start">
+            <input type="button" value="停止" class="stop">
+        </div>
+        <div class="show"></div>
+    </div>
+    <script>
+        var show = document.getElementsByClassName('show')[0];
+        var img = document.getElementsByClassName('img')[0];
+        var startBtn = document.querySelector('.start');
+        var stopBtn = document.querySelector('.stop');
+        var timer = null,
+            i = 1;
+        startBtn.addEventListener('click', function() {
+            clearInterval(timer);
+            this.id = 'alter';
+            timer = window.setInterval(() => {
+
+                if (i > 8) {
+                    i = 1;
+                } else {
+                    console.log(i);
+                    img.style.backgroundImage = 'url(' + './img/' + (i++) + '.png)';
+                }
+            }, 10);
+        });
+        stopBtn.addEventListener('click', function() {
+            console.log(i);
+            clearInterval(timer);
+            startBtn.id = '';
+            let iNow = i;
+            show.style.backgroundImage = 'url(' + './img/' + (i - 1) + '.png)';
+        });
+    </script>
+</body>
+
+</html>
