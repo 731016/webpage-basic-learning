@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册校验</title>
+</head>
+<style>
+    .box {
+        width: 500px;
+        height: 500px;
+        margin: 100px auto;
+    }
+    
+    .box label {
+        position: relative;
+        text-align: right;
+        display: block;
+        margin: 25px;
+    }
+    
+    .box label input[type='checkbox'] {
+        width: 79px;
+    }
+    
+    .box label input[type='date'] {
+        width: 172px;
+    }
+    
+    .box label span {
+        position: absolute;
+        left: 330px;
+    }
+    
+    .box label span:nth-of-type(2) {
+        left: 420px;
+    }
+    
+    .box div {
+        display: block;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <form action="" method="post">
+            <label for="user">
+                用户名：
+                <input type="text" name="username" id="user">
+                <div class="user-d" style="display: none;">1</div>
+            </label>
+            <label for="pwd">
+                密码：
+                <input type="password" name="password" id="pwd" >
+                <div class="password-d"  style="display: none;">1</div>
+            </label>
+
+            <label for="sex">
+                性别：
+                <input type="checkbox" name="" id="sex1" value="1"><span>男</span>
+                <input type="checkbox" name="" id="sex0" value="0"><span>女</span>
+                <div class="sex-d"  style="display: none;">1</div>
+            </label>
+            <label for="birthday">
+                出生日期：
+                <input type="date" name="birthday" id="birthday">
+                <div class="birthday-d"  style="display: none;">1</div>
+            </label>
+
+            <label for="email">
+                电子邮箱地址：
+                <input type="text" name="email" id="email">
+                <div class="email-d"  style="display: none;">1</div>
+            </label>
+        </form>
+
+    </div>
+    <script>
+        var user = document.getElementById('user');
+        var user_d = document.getElementsByClassName('user-d')[0];
+
+        var pwd = document.getElementById('pwd');
+        var pwd_d = document.getElementsByClassName('password-d')[0];
+
+        var sex1 = document.getElementById('sex1');
+        var sex0 = document.getElementById('sex0');
+        var sex_d = document.getElementsByClassName('sex-d')[0];
+
+
+        var bir = document.getElementById('birthday');
+        var bir_d = document.getElementsByClassName('birthday-d')[0];
+
+        var email = document.getElementById('email');
+        var email_d = document.getElementsByClassName('email-d')[0];
+
+        function isFormat(index, value, element, trueStr, errStr) {
+            if (value != '') {
+                switch (index) {
+                    case 1:
+                        let str = value,
+                            flag = true;
+                        for (let i = 0; i < str.length; i++) {
+                            if (str[i] >= '0' && str[i] <= '9') {} else {
+                                flag = false;
+                            }
+                        }
+                        if (flag) {
+                            element.style.display = 'block';
+                            element.innerText = trueStr + '正确';
+                            element.style.color = 'green';
+                        } else {
+                            element.style.display = 'block';
+                            element.innerText = errStr + ',错误!';
+                            element.style.color = 'red';
+                        }
+                        break;
+                    case 2:
+                        if (value.length >= 0 && value.length <= 8) {
+                            element.style.display = 'block';
+                            element.innerText = trueStr + '正确';
+                            element.style.color = 'green';
+                        } else {
+                            element.style.display = 'block';
+                            element.innerText = errStr + ',错误!';
+                            element.style.color = 'red';
+                        }
+                        break;
+                }
+            } else {
+                element.style.display = 'none';
+            }
+        }
+
+        user.onblur = function() {
+            isFormat(1, this.value, user_d, '输入格式', '不是纯数字');
+        };
+        pwd.onblur = function() {
+            isFormat(2, this.value, pwd_d, '密码格式', '密码长度过长');
+        };
+        sex1.onclick = function() {
+            if (this.checked == true) {
+                if (sex0.checked == true && sex1.checked == true) {
+                    sex_d.style.display = 'block';
+                    sex_d.innerText = '只能选择一个性别,错误!';
+                    sex_d.style.color = 'red';
+                } else {
+                    sex_d.style.display = 'block';
+                    sex_d.innerText = '选择性别正确正确';
+                    sex_d.style.color = 'green';
+                }
+            } else if (sex0.checked == true) {
+                sex_d.style.display = 'block';
+                sex_d.innerText = '选择性别正确正确';
+                sex_d.style.color = 'green';
+
+            } else {
+                sex_d.style.display = 'none';
+
+            }
+
+        };
+        sex0.onclick = function() {
+            if (this.checked == true) {
+                if (sex0.checked == true && sex1.checked == true) {
+                    sex_d.style.display = 'block';
+                    sex_d.innerText = '只能选择一个性别,错误!';
+                    sex_d.style.color = 'red';
+                } else {
+                    sex_d.style.display = 'block';
+                    sex_d.innerText = '选择性别正确正确';
+                    sex_d.style.color = 'green';
+                }
+            } else if (sex1.checked == true) {
+                sex_d.style.display = 'block';
+                sex_d.innerText = '选择性别正确正确';
+                sex_d.style.color = 'green';
+            } else {
+                sex_d.style.display = 'none';
+            }
+        };
+        bir.onblur = function() {
+            let nowTime = Date.now();
+            let inputTime = new Date(this.value).getTime();
+            if (isNaN(inputTime) == true) {
+                bir_d.style.display = 'none';
+                return;
+            }
+            if (inputTime <= nowTime) {
+                bir_d.style.display = 'block';
+                bir_d.innerText = '日期格式正确';
+                bir_d.style.color = 'green';
+            } else {
+                bir_d.style.display = 'block';
+                bir_d.innerText = '日期格式大于当前日期,错误！';
+                bir_d.style.color = 'red';
+            }
+
+        };
+        email.onblur = function() {
+            if (this.value == '') {
+                email_d.style.display = 'none';
+                return;
+            }
+            if (this.value.indexOf('@') != -1) {
+                email_d.style.display = 'block';
+                email_d.innerText = '邮件格式正确';
+                email_d.style.color = 'green';
+            } else {
+                email_d.style.display = 'block';
+                email_d.innerText = '邮件格式错误！';
+                email_d.style.color = 'red';
+            }
+        };
+    </script>
+</body>
+
+</html>
+
+</html>
