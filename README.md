@@ -58,6 +58,8 @@ html,css,javascript的基础学习案例
 + [location对象](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/location%E5%AF%B9%E8%B1%A1.md)
 + [date日期对象,定时器](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/date%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1.md)
 + [js内置函数](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/js%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0.md)
++ [DOM操作](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/dom%E6%93%8D%E4%BD%9C.md)
+
 
 ### JavaScript案例制作
 
