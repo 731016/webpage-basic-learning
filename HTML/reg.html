@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联盟旅游注册</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    
+    .main {
+        width: 1918px;
+        height: 918px;
+    }
+    
+    .main img {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .register {
+        position: absolute;
+        top: 150px;
+        right: 450px;
+        width: 400px;
+        height: 600px;
+    }
+    
+    .rhead {
+        height: 100px;
+        background-color: #FEC800;
+    }
+    
+    .rhead h2 {
+        color: #736f66;
+        padding: 36px;
+    }
+    
+    .rbody {
+        position: relative;
+        width: 400px;
+        height: 500px;
+        background-color: #FEFEFE;
+    }
+    
+    .user {
+        position: absolute;
+        top: 40px;
+        left: 70px;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #0067CE;
+        outline: none;
+    }
+    
+    .pwd {
+        position: absolute;
+        top: 110px;
+        left: 70px;
+        width: 250px;
+        height: 50px;
+        border: 1px solid #0067CE;
+        outline: none;
+    }
+    
+    .verify {
+        position: absolute;
+        top: 180px;
+        left: 70px;
+        width: 120px;
+        height: 50px;
+        border: 1px solid #0067CE;
+        outline: none;
+    }
+    
+    .rbody img {
+        position: absolute;
+        top: 180px;
+        left: 200px;
+        width: 125px;
+        height: 50px;
+    }
+    
+    .login {
+        position: absolute;
+        top: 250px;
+        left: 70px;
+        width: 150px;
+        height: 50px;
+        background-color: #FEA700;
+        border: none;
+    }
+    
+    .login:hover {
+        cursor: pointer;
+    }
+    
+    .auto_login {
+        position: absolute;
+        top: 270px;
+        left: 250px;
+    }
+    
+    .sp1 {
+        position: absolute;
+        top: 265px;
+        left: 275px;
+    }
+    
+    .footer {
+        position: absolute;
+        top: 310px;
+        left: 70px;
+        margin-top: 30px;
+        width: 250px;
+        height: 50px;
+        background-color: #F0F0F0;
+        text-align: center;
+        line-height: 50px;
+    }
+    
+    .sp2 {
+        color: #F8B6C2;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <img src="./images/bgc.png" alt="">
+        <div class="register">
+            <div class="rhead">
+                <h2>欢迎登录联盟旅游账户</h2>
+            </div>
+            <div class="rbody">
+                <input class="user" type="text" placeholder="请输入账号" />
+                <input class="pwd" type="password" placeholder="请输入密码" />
+                <input class="verify" type="text" placeholder="请输入验证码" />
+                <img src="./images/verify_code.jpg" alt="">
+                <input class="login" type="button" value="登录" />
+                <input class="auto_login" type="checkbox" name="" id="" />
+                <span class="sp1">自动登录</span>
+                <div class="footer">没有账户？
+                    <span class="sp2">立即注册</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
