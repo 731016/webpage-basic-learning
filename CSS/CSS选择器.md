@@ -1,3 +1,4 @@
+# 基础选择器
 ```html
 <style>
     a {
@@ -100,3 +101,108 @@
 ```
 **效果展示**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/105934_1a4350b1_8254421.png "css选择器.png")
+
+# 属性选择器
+```html
+<style>
+    table {
+        margin: 100px auto;
+        width: 500px;
+        height: 500px;
+        /* background-image: url(./images/爱心.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed; */
+        background: url(./images/爱心.png) no-repeat center scroll;
+    }
+    
+    tr:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    p:nth-of-type(1) {
+        height: 30px;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* 文本方向右对齐 */
+        direction: rtl;
+        /* 字体间距 */
+        letter-spacing: 20px;
+        /* 首行缩进 */
+        text-indent: 10px;
+        /* 文本阴影 */
+        text-shadow: lightcoral 1px 1px 0.5px;
+    }
+    
+    p:nth-of-type(2) {
+        height: 30px;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        /* 文本方向右对齐 */
+        direction: rtl;
+        /* 字体间距 */
+        letter-spacing: 20px;
+        /* text-indent: 10px; */
+        text-shadow: lightcoral 1px 1px 0.5px;
+    }
+    
+    ul>li {
+        /* 简写属性 声明列表所有属性 */
+        list-style: none;
+        /* 列表项标志 */
+        /* list-style-image: url(./images/爱心.png); */
+        /* 列表项标志位置 */
+        list-style-position: inside;
+        /* 列表项标志类型 */
+        list-style-type: georgian;
+    }
+</style>
+
+<body>
+    <p>去官方区划</p>
+    <p>去官方区划</p>
+    <div>
+        <ul>
+            <li>武汉市</li>
+            <li>广州市</li>
+            <li>杭州市</li>
+        </ul>
+    </div>
+    <table border="" cellspacing="0" cellpadding="0">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+</body>
+```
+**效果展示**  
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/112156_d3d6c917_8254421.png "3.png")
