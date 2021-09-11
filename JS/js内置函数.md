@@ -51,3 +51,38 @@
 ```
 **效果展示**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/124820_122e15ba_8254421.png "sum.png")
+
+```js
+//第一种方法
+function sum() {
+            var a = prompt('输入数字a：');
+            if (a == '') {
+                alert('请输入值！');
+                return;
+            }
+            var b = prompt('输入数字b：');
+            if (b == '') {
+                alert('请输入值！');
+                return;
+            }
+            var sum = parseFloat(a) + parseFloat(b);
+            console.log('两数的和为：' + sum);
+        }
+//第二种方法
+        // arguments是伪数组 只有length属性
+        var argFun = function(...arguments) {
+            var sum = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+//第三种方法
+        var productArgs = (...arguments) => {
+            var sum = 1;
+            for (var i = 1; i < arguments.length; i++) {
+                sum *= arguments[i];
+            }
+            return sum;
+        }
+```
