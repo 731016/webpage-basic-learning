@@ -1,37 +1,22 @@
 # 前端基础学习
 
-#### 介绍
+## 介绍
 html,css,javascript的基础学习案例
 
-#### 软件架构
-软件架构说明
+## HTML
++ [HTML模板](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/HTML/HTML%E6%A8%A1%E6%9D%BF.md)
++ [HTML常用标签](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/HTML/HTML%E5%B8%B8%E7%94%A8%E6%A0%87%E7%AD%BE.md)
 
 
-#### 安装教程
+### HTML案例制作
+1. [连连看](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/HTML/llk.html)  
+**案例效果**  
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/103428_ac03ebae_8254421.png "llk.png")
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+2. [旅游联盟注册页面](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/HTML/reg.html)  
+**案例效果**  
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/103802_3b33af08_8254421.png "zc1.png")
 
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+3. [用户注册页面](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/HTML/register.html)  
+**案例效果**  
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/104111_07f62c5d_8254421.png "zc2.png")
