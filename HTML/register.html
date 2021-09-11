@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册</title>
+    <style>
+        html {
+            font-family: "Microsoft YeHei" Consolas;
+        }
+        
+        #register_from {
+            width: 300px;
+            margin: 100px auto;
+        }
+        
+        #register_from input {
+            position: relative;
+            height: 25px;
+            ;
+        }
+        
+        label {
+            display: inline-block;
+            width: 100px;
+            text-align: left;
+        }
+        
+        #verify_code {
+            position: absolute;
+        }
+        
+        input[type="submit"] {
+            position: absolute;
+            border: none;
+            left: 50%;
+            left: 100px;
+            margin-top: 15px;
+            width: 200px;
+            height: 25px;
+            color: #fff;
+            background-color: #0d7ef5;
+            border-radius: 10px;
+            font-weight: 800;
+            line-height: 25px;
+        }
+        
+        input[type="submit"]:hover {
+            cursor: pointer
+        }
+        
+        input,
+        label {
+            margin: 0 5px 5px 0;
+        }
+        
+        label {
+            vertical-align: bottom;
+        }
+        
+        #sex_n,
+        #sex_l {
+            vertical-align: middle;
+        }
+        
+        iframe {
+            position: absolute;
+            top: 100px;
+            right: 200px;
+            width: 300px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="register_from" action="./input.html" method="GET">
+        <label for="user">用户名</label>
+        <input id="user" name="user" type="text" placeholder="请输入账号">
+
+        <br>
+        <label for="pwd">密码</label>
+        <input id="pwd" name="pwd" type="password" placeholder="请输入密码">
+        <br>
+
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="text" placeholder="请输入Email">
+        <br>
+
+
+        <label for="name">姓名</label>
+        <input id="name" name="name" type="text" placeholder="请输入真实姓名">
+        <br>
+
+        <label for="phonenumber">手机号</label>
+        <input id="phonenumber" name="phonenumber" type="number" maxlength="11" placeholder="请输入您的手机号">
+        <br>
+
+        <label for="">性别</label>
+        <input id="sex_n" type="radio" checked value="1">男
+        <input id="sex_l" type="radio" value="0">女
+        <br>
+
+        <label for="">出生日期</label>
+        <input type="date" name="birthday">
+        <br>
+
+        <label for="verify_code">验证码</label>
+        <input type="text" id="verify_code" name="verify_code" placeholder="请输入验证码">
+        <img id="verify_code" src="./images/verify_code.jpg" alt="">
+        <br>
+
+        <input type="submit" value="注&nbsp;&nbsp;&nbsp;册" />
+        <input type="hidden" name="" id="iframe" value="" />
+        <iframe allowpaymentrequest="true" name="iframe_name" id="iframe_name" src="./input.html" frameborder="0"></iframe>
+    </form>
+    <script>
+        var peoplename = document.getElementById('name');
+        peoplename.onblur = function() {
+            console.log(peoplename.value);
+            window.frames['iframe_name'].document.getElementById('pnm').value = peoplename.value
+        }
+    </script>
+</body>
+
+</html>
