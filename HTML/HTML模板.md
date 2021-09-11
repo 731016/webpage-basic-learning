@@ -1,4 +1,4 @@
-HTML网页必备的框架标签
+# HTML网页必备的框架标签
 ```html
 <!-- html5声明 -->
 <!DOCTYPE html>
@@ -13,4 +13,11 @@ HTML网页必备的框架标签
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 标题 -->
     <title>hello</title>
+</head>
+
+<!--内容-->
+<body>
+</body>
+
+</html>
 ```
