@@ -94,3 +94,57 @@
 ```
 **效果展示**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/120440_cea8735a_8254421.png "bir.png")
+
+
+# 时间倒计时
+```html
+<body>
+    <!-- 内嵌 -->
+    <input type="button" value="点击触发求和函数" onclick="javascript:sum()">
+    <input id="start" type="button" value="点击开始计时">
+    <input id="stop" type="button" value="点击停止计时">
+    <div class="time">时间</div>
+function  countDown(time, timer, ele) {
+            var  nowtime = + new  Date();
+            var  inputtime = +new  Date(time);
+            var  counttime = (inputtime - nowtime) / 1000;
+            if (counttime <= 0) {
+                window.clearInterval(timer);
+                // ele.style.bgcolor = 'red';
+                ele.style.backgroundColor = '#D46C75';
+                return '已超时!';
+
+            }
+            var  d = parseInt(counttime / 60 / 60 / 24);
+            d = d < 10 ? '0' + d : d;
+            var  h = parseInt(counttime / 60 / 60 % 24);
+            h = h < 10 ? '0' + h : h;
+            var  m = parseInt(counttime / 60 % 60);
+            m = m < 10 ? '0' + m : m;
+            var  s = parseInt(counttime % 60);
+            s = s < 10 ? '0' + s : s;
+            return  d + '天' + h + '时' + m + '分' + s + '秒';
+        }
+        // var timediv = document.querySelector('.time');
+        var timediv = document.getElementsByClassName('time');
+        // console.log(a[0]);
+        // console.log(timediv);
+
+        var startBtn = document.querySelector('#start');
+        var stopBtn = document.querySelector('#stop');
+        var time;
+        startBtn.addEventListener('click', function() {
+            clearInterval(time);
+            time = setInterval(function() {
+                timediv[0].innerHTML = countDown('2021-9-11 19:30:00', time, timediv[0]);
+            }, 1000);
+        });
+        stopBtn.addEventListener('click', function() {
+            window.clearInterval(time);
+        });
+    </script>
+</body>
+```
+**效果展示**  
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/130226_6b12d603_8254421.png "time.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/130304_d084254a_8254421.png "timeover.png")
