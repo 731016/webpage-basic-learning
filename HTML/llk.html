@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>连连看</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: #136EC2;
+        }
+        
+        h2 {
+            display: inline;
+        }
+        
+        hr {
+            /* 转换为行内块元素 */
+            display: inline-block;
+            /* 块级元素基于基线对齐 */
+            vertical-align: middle;
+            width: 800px;
+            color: #ccc;
+        }
+        
+        h3 {
+            font-size: 14px;
+        }
+        
+        section {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .img1 {
+            width: 220px;
+            position: relative;
+            float: right;
+            top: -100px;
+        }
+        
+        .div1 {
+            position: absolute;
+            width: 900px;
+        }
+        
+        .div2 {
+            position: absolute;
+            width: 900px;
+        }
+        
+        .img2 {
+            position: relative;
+            float: right;
+            top: -200px;
+        }
+        
+        .t1 {
+            color: #B29999;
+        }
+        
+        .d1,
+        .d2,
+        .d3 {
+            margin: 20px;
+            border-bottom: 1px dashed #ccc;
+        }
+        
+        td {
+            margin: 10px;
+        }
+        
+        .mu-td {
+            float: left;
+            width: 100px;
+            line-height: 100px;
+            text-align: center;
+            font-weight: 800;
+            background: linear-gradient(left, #FA5A55, #FFCE51);
+            background: -webkit-linear-gradient(left top, #FA5A55, #FFCE51);
+            color: #fff;
+        }
+        
+        .return {
+            display: block;
+            position: fixed;
+            top: 50px;
+            right: 50px;
+            border-radius: 10px;
+            width: 50px;
+            height: 50px;
+            color: #fff;
+            background-color: #136EC2;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 800;
+            line-height: 50px;
+        }
+        
+        footer {
+            width: 800px;
+            height: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1000px;
+            color: #fff;
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>连连看</h1>
+        <p>《连连看》是由<a href="https://baike.baidu.com/item/%E9%BB%84%E5%85%B4%E6%AD%A6">黄兴武</a> 创作的一款PC端
+            <a href="https://baike.baidu.com/item/%E7%9B%8A%E6%99%BA/7021377">益智</a>类
+            <a href="https://baike.baidu.com/item/%E6%B8%B8%E6%88%8F/33581">游戏</a>。</p>
+        <p>《连连看》只要将相同的两张牌用三根以内的直线连在一起就可以消除，规则简单容易上手。 游戏速度节奏快，画面清晰可
+            <br> 爱，适合细心的玩家。 丰富的
+            <a href="https://baike.baidu.com/item/%E9%81%93%E5%85%B7/6211185">道具</a>和公共模式的加入，增强游戏的竞争性。 多样式的地图，使玩家在各个游戏水平都可以寻找到
+            <br> 挑战的目标，长期地保持游戏的新鲜感。
+        </p>
+
+        <div class="d1">
+            <span class="t1">中文名&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <span style="margin: 20px;">连连看</span>
+            <span class="t1" style="margin-left: 300px;">内容主题</span>
+            <span style="margin: 20px;">多人</span>
+        </div>
+        <div class="d2">
+            <span class="t1">游戏类型</span>
+            <span style="margin: 20px;">益智类</span>
+            <span class="t1" style="margin-left: 300px;">游戏画面</span>
+            <span style="margin: 20px;">
+            <a href="https://baike.baidu.com/item/%E5%8A%A8%E7%94%BB/206564">动画</a></span>
+        </div>
+        <div class="d3">
+            <span class="t1">游戏平台</span>
+            <span style="margin: 20px;">PC</span>
+            <span class="t1" style="margin-left: 327px; margin-right: 16px;">创作者</span>
+            <span style="margin: 20px;">黄兴武</span>
+        </div>
+
+        <table>
+            <tr>
+                <td class="mu-td" rowspan="3" id="ml">目录</td>
+                <td>
+                    <a href="#m1" style="display: block;margin: 15px;">1&nbsp;制作背景<br>
+                        <a href="#m2" style="display: block;margin: 15px;">2&nbsp;操作指南<br>
+                            <a href="#m3" style="display: block;margin: 15px;">3&nbsp;计分规则
+                </td>
+            </tr>
+        
+    </table>
+    <h2 id="m1">制作背景</h2><hr>
+    <p>游戏“连连看”顾名思义就是找出相关联的东西，这个连连看在网上基本是用在小游戏中，
+        就是找出相同的两样东西，在一定<br>
+        的规则之内可以做为相关联处理。“连连看”的发展经历了从
+        <a href="https://baike.baidu.com/item/%E6%A1%8C%E9%9D%A2%E6%B8%B8%E6%88%8F/8231149">桌面游戏</a>、
+                    <a href="https://baike.baidu.com/item/%E5%9C%A8%E7%BA%BF%E6%B8%B8%E6%88%8F">在线游戏</a>、
+                    <a href="https://baike.baidu.com/item/%E7%A4%BE%E4%BA%A4%E6%B8%B8%E6%88%8F">社交游戏</a>三个过程。</p>
+                    <p>网络小游戏、网页游戏越来越受网民欢迎，除了玩的方法简单外（不像其他游戏还需要注册下载繁琐过程），很多游戏不乏经典。
+                        <br>
+                        <a href="https://baike.baidu.com/item/%E8%BF%9E%E8%BF%9E%E7%9C%8B%E6%B8%B8%E6%88%8F">连连看游戏</a>就是典型。
+                    </p>
+                    <p>
+                        不管走到哪个网页游戏网站，连连看游戏总是排在受玩家欢迎排名的前5位， 休闲、
+                        <br> 趣味、益智是连连看玩不厌的精华，且不分男女老少、工薪白领，是一款适合大众的
+                        <br> 经典网络、单机休闲小游戏。
+                    </p>
+                    <div class="div1">
+                        <img class="img1" src="./images/llk1.gif" alt="连连看1">
+                    </div>
+                    <h2 id="m2">操作指南</h2>
+                    <hr>
+                    <p>玩家可以将2个相同图案的对子连接起来，连接线不多于3根直线，就可以成功将对子消除。</p>
+                    <p>第一次使用鼠标点击棋盘中的棋子，该棋子此时为“被选中”，以特殊方式显示； 再次以鼠标点击其他棋子，若该棋子与
+                        <br> 被选中的棋子图案相同，且把第一个棋子到第二个棋子连起来， 中间的直线不超过3根，则消掉这一对棋子，否则第一颗
+                        <br> 棋子恢复成未被选中状态，而第二颗棋子变成被选中状态。
+                    </p>
+
+                    <h3>胜利条件</h3>
+                    <p>·将棋盘上面的对子全部消除掉。按消除的数量排列名次。</p>
+                    <p>·其他玩家都输掉了。</p>
+                    <h3>失败条件</h3>
+                    <p>·每个玩家选择牌的时间为30秒，超过时间而未消除一对的玩家以判为输掉。</p>
+                    <p>·有一个玩家将所有的牌都全部消掉。</p>
+                    <div class="div2">
+                        <img class="img2" src="./images/llk2.jpg" alt="连连看2">
+                    </div>
+                    <h2 id="m3">计分规则</h2>
+                    <hr>
+                    <p>每次得分附加分数为连攻击的分数。每次得分只统计最大连攻击数。</p>
+                    <p>最大得分：60+108=168分</p>
+                    <p>经常性得分：12+18=30分</p>
+                    <a class="return" href="#">返回顶部</a>
+
+    </section>
+    <footer>测试锚点</footer>
+</body>
+
+</html>
