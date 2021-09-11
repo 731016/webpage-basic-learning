@@ -3,10 +3,6 @@
 ## 介绍
 `html`,`css`,`javascript`的**基础**学习案例
 
-## 源码
-+ [HTML案例源码](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/HTML/html-study.zip)
-+ [CSS案例源码](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/CSS/css-study.zip)
-+ [javascript案例源码](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/js-study.zip)
 
 ## HTML
 + [HTML模板](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/HTML/HTML%E6%A8%A1%E6%9D%BF.md)
@@ -98,5 +94,20 @@
 **案例效果**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/131423_9db34cf9_8254421.png "zcyz.png")
 
-# html+css+js综合案例
-1. 
+
+## 源码
++ [HTML案例源码](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/HTML/html-study.zip)
++ [CSS案例源码](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/CSS/css-study.zip)
++ [javascript案例源码](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/js-study.zip)
+
+## html+css+js综合案例
++ [html+css+js的各种案例](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/html_css_js%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B.zip)
+> 百度音乐，表格，畅销书排行榜，超链接，电影，购物车，古诗，家用电器，计算器，京东，精灵图（雪碧图），快乐庄园，图片切换（轮播）/透明，下拉框，新浪，注册，Json
+**部分案例效果**<br>
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/134801_b4cfd283_8254421.png "1.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/134814_2316146f_8254421.png "2.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/134825_d64e83f8_8254421.png "3.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/134835_fd1cce70_8254421.png "4.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/134844_30bd03f4_8254421.png "5.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/134853_e6a25c3a_8254421.png "6.png")
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/134903_95ddb94f_8254421.png "8.png")
