@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        for (let i = 1; i <= 9; i++) {
+
+            for (let j = 1; j <= i; j++) {
+                document.writeln(i + '*' + j + '=' + i * j);
+            }
+            document.write('<br />')
+        }
+        for (let i = 1; i <= 1000; i++) {
+            let sum = 0;
+            for (j = 1; j < i; j++) {
+                if (i % j == 0) {
+                    sum += j;
+                }
+            }
+            if (i == sum) {
+                document.writeln(i);
+            }
+        }
+        document.writeln('<br>');
+
+        function frog(count) {
+            if (count == 1) {
+                return 1;
+            } else if (count == 2) {
+                return 2;
+            } else {
+                return frog(count - 2) + frog(count - 1);
+            }
+        }
+        // document.writeln(frog(20));
+        let result = 0,
+            n1 = 1,
+            n2 = 2;
+        for (let i = 3; i <= 20; i++) {
+            result = n1 + n2;
+            n1 = n2;
+            n2 = result;
+            console.log(i + '->' + result);
+        }
+        document.writeln(result);
+    </script>
+</body>
+
+</html>
