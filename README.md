@@ -37,19 +37,19 @@ html,css,javascript的基础学习案例
 
 ### CSS案例制作
 
-1. [防百度首页](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/CSS/baidu.html)
+1. [防百度首页](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/CSS/baidu.html)  
 **案例效果**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/110634_b7b4427d_8254421.png "百度.png")
 
-2. [新浪首页导航条](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/CSS/news.html)
+2. [新浪首页导航条](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/CSS/news.html)  
 **案例效果**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/112745_8ebc96db_8254421.png "sing.png")
 
-3. [QQ首页导航条](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/CSS/qq.html)
+3. [QQ首页导航条](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/CSS/qq.html)  
 **案例效果**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/113357_82cd94e8_8254421.png "qqnav.png")
 
-4. [QQ注册页面](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/CSS/qq_register.html)
+4. [QQ注册页面](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/CSS/qq_register.html)  
 **案例效果**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/113153_5eeeba5a_8254421.png "qq.png")
 
@@ -61,24 +61,24 @@ html,css,javascript的基础学习案例
 
 ### JavaScript案例制作
 
-1. [仿Windows简易计算器](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/cal.html)
+1. [仿Windows简易计算器](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/cal.html)  
 **案例效果**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/115501_2ac9bdd0_8254421.png "cal.png")
 
-2. [仿奥运五环](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/cutimg.html)
+2. [仿奥运五环](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/cutimg.html)  
 **案例效果**  
 <ins>普通的定义属性，无法完成真正的样式</ins>
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/120131_ae20059c_8254421.png "oly.png")
 
-3. [alert模拟银行取款](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/money.html)
+3. [alert模拟银行取款](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/money.html)  
 **案例效果**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/120928_2fde7d03_8254421.png "pwd.png")
 
-4. [猜大小](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/random.html)
+4. [猜大小](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/random.html)  
 **案例效果**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/121113_b8618eb7_8254421.png "rand.png")
 
-5. [九九乘法表](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/mul.html)
+5. [九九乘法表](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/mul.html)  
 **案例效果**  
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/121256_79b8a1ad_8254421.png "mul.png")
 
