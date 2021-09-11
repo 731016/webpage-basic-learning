@@ -55,3 +55,30 @@ html,css,javascript的基础学习案例
 
 ## JavaScript
 + [数组对象](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/%E6%95%B0%E7%BB%84.md)
++ [location对象](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/location%E5%AF%B9%E8%B1%A1.md)
++ [date日期对象,定时器](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/date%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1.md)
++ [js内置函数](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/js%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0.md)
+
+### JavaScript案例制作
+
+1. [仿Windows简易计算器](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/cal.html)
+**案例效果**  
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/115501_2ac9bdd0_8254421.png "cal.png")
+
+2. [仿奥运五环](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/cutimg.html)
+**案例效果**  
+<ins>普通的定义属性，无法完成真正的样式</ins>
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/120131_ae20059c_8254421.png "oly.png")
+
+3. [alert模拟银行取款](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/money.html)
+**案例效果**  
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/120928_2fde7d03_8254421.png "pwd.png")
+
+4. [猜大小](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/random.html)
+**案例效果**  
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/121113_b8618eb7_8254421.png "rand.png")
+
+5. [九九乘法表](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JS/mul.html)
+**案例效果**  
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/121256_79b8a1ad_8254421.png "mul.png")
+
