@@ -1,7 +1,7 @@
 # 前端基础学习
 
 ## 介绍
-`html`,`css`,`javascript`的**基础**学习案例
+`html`,`css`,`javascript`,`JQuery`的**基础**学习案例
 
 
 ## HTML
@@ -111,3 +111,12 @@
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/134844_30bd03f4_8254421.png "5.png")
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/134853_e6a25c3a_8254421.png "6.png")
 ![输入图片说明](https://images.gitee.com/uploads/images/2021/0911/134903_95ddb94f_8254421.png "8.png")
+
+## JQuery案例
+[正则验证](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JQuery/%E6%AD%A3%E5%88%99%E9%AA%8C%E8%AF%81.html)
+**案例效果**<br>
+![注册验证](https://images.gitee.com/uploads/images/2021/0915/151700_8f0e60fe_8254421.png "reg.png")
+
+[json格式增删改查](https://gitee.com/LovelyHzz/webpage-basic-learning/blob/master/JQuery/json%E6%A0%BC%E5%BC%8F%E8%AF%BB%E5%8F%96.html)
+**案例效果**<br>
+![输入图片说明](https://images.gitee.com/uploads/images/2021/0915/151910_2221c431_8254421.png "json.png")
