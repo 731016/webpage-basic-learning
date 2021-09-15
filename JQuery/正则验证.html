@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        table {
+            width: 600px;
+            background-color: antiquewhite;
+            margin: 200px auto;
+        }
+        
+        tr td:nth-of-type(1) {
+            width: 20%;
+            text-align: right;
+        }
+        
+        tr td:nth-of-type(2) {
+            width: 80%;
+            text-align: left;
+        }
+        
+        input {
+            width: 100%;
+        }
+    </style>
+    <script>
+        function isFormat(ele, regstr, correct, err) {
+            console.log($(ele).val());
+            console.log(regstr.test($(ele).val()));
+
+            if (regstr.test($(ele).val())) {
+                $(ele).next().text(correct).css("color", "green");
+            } else {
+                $(ele).next().text(err).css("color", "red");
+            }
+        }
+
+        $(function() {
+            $("input").blur(function(event) {
+                let eveType = $(event.currentTarget).attr("type");
+                let value = $(event.currentTarget).val();
+                if ($.trim(value).length == 0) {
+                    $(event.currentTarget).next().text("不能为空！").css("color", "red");
+                }
+                if (eveType == 'tel') {
+                    let telReg = new RegExp(/^\d{3}-\d{8}|\d{4}-\d{7}$/);
+                    isFormat($(event.target), telReg, "电话号码正确", "电话号码错误!");
+                }
+                if (eveType == 'email') {
+                    let emailReg = new RegExp(/^\w+([-+.]\w+)*@\w+([-.]\w+)*.\w+([-.]\w+)*$/);
+                    isFormat($(event.target), emailReg, "邮箱格式正确", "邮箱格式错误!");
+                }
+                if (eveType == 'password') {
+                    let pwdReg = new RegExp(/^[a-zA-Z]\w{5,17}$/);
+                    isFormat($(event.target), pwdReg, "密码正确", "以字母开头，长度在6-18之间， 只能包含字符、数字和下划线!");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <table border="0">
+        <tr>
+            <td>手机号</td>
+            <td>
+                <input type="tel" name="" id="">
+                <div></div>
+            </td>
+
+        </tr>
+        <tr>
+            <td>邮箱</td>
+            <td>
+                <input type="email" name="" id="">
+                <div></div>
+            </td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td>
+                <input type="password">
+                <div></div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

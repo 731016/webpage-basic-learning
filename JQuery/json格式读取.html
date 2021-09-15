@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 600px;
+            margin: 0 auto;
+            border: 1px solid #282C34;
+            text-align: center;
+            border-collapse: collapse;
+            /* transform-style: preserve-3d; */
+        }
+        /* #table {
+            transform: rotate3d(1, 1, 1, 20deg);
+        } */
+        
+        th {
+            border-bottom: 1px solid #282C34;
+        }
+        
+        th,
+        td {
+            border-right: 1px solid #282C34;
+        }
+        
+        #tc {
+            /* visibility: hidden; */
+            width: 200px;
+            height: 100px;
+            margin: 0 auto;
+            border-radius: 5%;
+            background-color: #ccc;
+        }
+        
+        .search {
+            width: 276px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+        }
+        
+        .search input[type="search"] {
+            width: 200px;
+            height: 25px;
+        }
+        
+        .edit {
+            width: 300px;
+            position: fixed;
+            top: 50px;
+            right: 300px;
+            box-shadow: 2px 2px #ccc;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        
+        .edit label {
+            margin-left: 20px;
+        }
+        
+        .edit input {
+            margin-left: 50px;
+        }
+        
+        #sbirthday {
+            margin-left: 20px;
+        }
+        
+        #add {
+            margin-left: 100px;
+            margin-top: 10px;
+        }
+        
+        #del {
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script>
+        var stu_list = [{
+            'sid': 1,
+            'name': '张三',
+            'age': 18,
+            'sex': '男',
+            'birthday': '1999-10-19'
+        }, {
+            'sid': 2,
+            'name': '李四',
+            'age': 21,
+            'sex': '男',
+            'birthday': '2000-01-19'
+        }, {
+            'sid': 3,
+            'name': '王五',
+            'age': 20,
+            'sex': '女',
+            'birthday': '2000-10-09'
+        }, {
+            'sid': 4,
+            'name': '胡梓卓',
+            'age': '22',
+            'sex': '男',
+            'birthday': '1999-10-19'
+        }, {
+            'sid': 5,
+            'name': '涂鏊飞',
+            'age': '21',
+            'sex': '男',
+            'birthday': '2000-01-11'
+        }, {
+            'sid': 6,
+            'name': 'Bob',
+            'age': '56',
+            'sex': '男',
+            'birthday': '1969-01-19'
+        }];
+        // 生成表格
+        function initTable(students) {
+            var $tables = $("#table");
+            $("#table :first-child").siblings("tr").remove();
+
+            $.each(students, function(index, element) {
+                var $tr = $("<tr></tr>");
+                $.each(element, function(i, ele) {
+                    if (i == 'sid') {
+                        $tr.append($('<td><a href="javascript:;">' + ele + '</a></td>'));
+                    } else {
+                        $tr.append($("<td>" + ele + "</td>"));
+                    }
+                });
+                $tr.append($("<td>" + '<a href="javascript:;">删除</a>' + "</td>"));
+                $tables.append($tr);
+            });
+
+            // 最后每个tr一个a
+            let $lastLink = $("#table tr").children(":last-of-type()").children();
+            $lastLink.on("click", function(event) {
+                let flag = confirm('确定要删除嘛？');
+                if (!flag) {
+                    return;
+                }
+                $(event.target).parent().parent().remove();
+            });
+        };
+        // 筛选数据
+        function getData(value) {
+            if (value == "") {
+                return stu_list;
+            } else {
+                var newArr = [];
+                $.each(stu_list, function(index, element) {
+                    if (element.name.indexOf(value) >= 0 || element.sid == value) {
+                        newArr[newArr.length++] = element;
+                    }
+                });
+                return newArr;
+            }
+        }
+        // 回车搜索
+        function getKeyUp() {
+            $(document).keyup(function(event) {
+                // 回车键
+                if (event.which == 13) {
+                    var value = $('input[type = "search"]').val();
+                    initTable(getData(value));
+                }
+            });
+        }
+        // 增加函数
+        function add() {
+            $("#add").click(function() {
+                let id = $("#sid").val();
+                let name = $("#sname").val();
+                let age = $("#sage").val();
+                let sex = $("#ssex:checked").val();
+                let birthday = $("#sbirthday").val();
+                if (id == "" || name == "" || age == "" || sex == "" || birthday == "") {
+                    console.log('参数不能为空');
+                    return;
+                }
+                let newStu = {
+                    "sid": id,
+                    "name": name,
+                    "age": age,
+                    "sex": sex,
+                    "birthday": birthday
+                };
+                stu_list.push(newStu);
+                initTable(stu_list);
+            });
+        };
+
+        // 展示数据
+        function show() {
+            $("#table tr td").children(":last-of-type").click(function() {
+                let queryId = $(this).text();
+                let getObj = getData(queryId);
+                $("#sid").val(getObj[0].sid);
+                $("#sname").val(getObj[0].name);
+                $("#sage").val(getObj[0].age);
+                $("#ssex[value='" + getObj[0].sex + "']").prop("checked", "true");
+                $("#sbirthday").val(getObj[0].birthday);
+            });
+        }
+        // 提交数据
+        function reviseDate() {
+            $("#revise").click(function() {
+                let idIndex = $("#sid").val(); // sid
+                let index = -1; //id对应的下标
+                for (let i = 0; i < stu_list.length; i++) {
+                    if (stu_list[i].sid == idIndex) {
+                        index = i;
+                    }
+                }
+
+                stu_list[index].name = $("#sname").val();
+                stu_list[index].age = $("#sage").val();
+                stu_list[index].sex = $("#ssex").val();
+                stu_list[index].birthday = $("#sbirthday").val();
+                initTable(stu_list);
+            });
+        }
+        $(function() {
+            initTable(stu_list);
+            $("input[type='button']").click(function() {
+                var value = $('input[type = "search"]').val();
+                initTable(getData(value));
+            });
+            getKeyUp();
+            add();
+            show();
+            reviseDate();
+        });
+    </script>
+
+</head>
+
+<body>
+    <div class="search">
+        <input type="search" placeholder="请输入姓名或学号查询。。。">
+        <input type="button" value="查询">
+    </div>
+    <table border="0" id="table">
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+            <th>出生日期</th>
+            <th>操作</th>
+        </tr>
+    </table>
+    <div class="edit">
+        <div>
+            <label for="sid">学号</label>
+            <input type="text" id="sid">
+        </div>
+        <div>
+            <label for="sname">姓名</label>
+            <input type="text" id="sname">
+        </div>
+        <div>
+            <label for="sage">年龄</label>
+            <input type="number" name="" id="sage">
+        </div>
+        <div>
+            <label for="ssex">性别</label>
+            <input type="radio" name="sex" id="ssex" value="男">男
+            <input type="radio" name="sex" id="ssex" value="女">女
+        </div>
+        <div>
+            <label for="sbirthday">出生日期</label>
+            <input type="date" name="" id="sbirthday">
+        </div>
+        <button id="add">添加</button>
+        <button id="revise">修改</button>
+    </div>
+
+
+</body>
+
+</html>
